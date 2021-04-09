@@ -66,3 +66,6 @@ sleep 10
 ## Re-enable the HDMI
 tvservice -p
 xset -display :0 dpms force on
+
+## Enable restarting of the MagicMirror script
+pm2 save
