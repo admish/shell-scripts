@@ -32,7 +32,7 @@ export PATH=/home/pi/.npm-global/bin:$PATH
 
 ## Update MagicMirror
 cd $mmPath
-git pull
+git pull -r
 npm install -g npm
 npm audit fix
 
@@ -40,7 +40,7 @@ npm audit fix
 ## Update Modules
 for i in $(find $mmPath/modules -maxdepth 2 -type d -name .git); do
 	cd $i/..
-	git pull
+	git pull -r
 	npm install -g npm
 	npm audit fix
 
