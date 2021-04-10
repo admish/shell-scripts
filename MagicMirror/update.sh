@@ -32,7 +32,10 @@ export PATH=/home/pi/.npm-global/bin:$PATH
 
 ## Update MagicMirror
 cd $mmPath
-git pull -r
+git reset --hard
+## The recommendation is to reset and not rebase. (Not sure this is best)
+## https://docs.magicmirror.builders/getting-started/upgrade-guide.html
+git pull
 npm install -g npm
 npm audit fix
 
